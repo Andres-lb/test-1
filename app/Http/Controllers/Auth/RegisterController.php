@@ -86,14 +86,14 @@ class RegisterController extends Controller
             'gender' => $data['gender'],
             'address' => $data['address'],
             'country' => $data['country'],
-            'birthday' => Carbon::parse($data['birthday']),
+            'birthday' => Carbon::parse($data['birthday']), 
             'subscribe' => $data['subscribe'],
             'a-terms' => $data['a-terms']
         ]);
     }
-
-
+   
 }
 
 
-
+// Carbon::createFromFormat('Y-m-d H:i:s', $d)->format('d/m/Y')
+// Carbon::parse($data['birthday']),

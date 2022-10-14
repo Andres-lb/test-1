@@ -2,9 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\user;
+use App\Models\Country;
 use App\Http\Controllers\Auth\updateController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\UserallController;
+use App\Http\Controllers\Auth\Countrycontroller;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +29,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('allusers',[UserallController::class,'alluser'])->middleware('auth');
+
 
 Route::get('allusers/{user}',[UserallController::class,'find'])->middleware('auth');
 

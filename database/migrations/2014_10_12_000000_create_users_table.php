@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('gender');
             $table->text('address')->nullable();
             $table->string('country')->nullable();
-            $table->string('birthday');
+            $table->date('birthday');
             $table->boolean('subscribe')->nullable();
             $table->boolean('a-terms'); 
             $table->rememberToken();

@@ -109,7 +109,7 @@
 
     <!-- drop down all countries //we can use selectpicker countrypicker (github) but didn't run -->
 
-                              <x-form.country current="{{$user->country}}"/>
+                              <x-form.country current="{{ $user->country }}"/>
 
     <!-- end of drop down all countries -->
 
@@ -119,7 +119,8 @@
 
     <!-- Date of birth// required -->
 
-                                    <x-form.birth value="{{ $user->birthday }}" name="birthday" label="Date of birth"/>
+
+   <x-form.birth value="{{$user->birthday}}" name="birthday" label="Date of birth"/>
 
     <!--  End of Date of birth -->
 
