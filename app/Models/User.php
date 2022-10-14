@@ -43,6 +43,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function setbirthdayAttribute($value)
+    {
+        $this->attributes['birthday'] = Carbon::createFromFormat( 'd/m/Y', $value)->format(format: 'Y-m-d');
+    }
+
+
     public function getbirthdayAttribute(){
         return Carbon::createFromFormat('Y-m-d', $this->attributes['birthday'])->format(format:'d/m/Y');
     }

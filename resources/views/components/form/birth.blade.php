@@ -11,7 +11,10 @@
         <script>
             $( function() {
                 $( "#{{$name}}" ).datepicker({
-            dateFormat: "dd/mm/yy"
+            dateFormat: "dd/mm/yy",
+            yearRange: "1925:2023",
+            changeMonth: true,
+            changeYear: true,
             });
             });
            

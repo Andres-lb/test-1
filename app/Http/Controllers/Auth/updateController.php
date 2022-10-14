@@ -32,14 +32,14 @@ class updateController extends Controller
         'gender'=> ['required'],
          'address'=> ['max:1500'],
          'country'=> ['string'],
-         'birthday'=> ['required','date'],
+         'birthday'=> ['required'],
          'subscribe'=> ['boolean'],
 
     ]);
     
     $attributes['name']=ucwords($attributes['name']);
     $attributes['lname']=ucwords($attributes['lname']);
-    $attributes['birthday']=Carbon::parse($attributes['birthday']);
+    
 
 
 if(isset($attributes['password'])) {
